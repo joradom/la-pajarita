@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="La Pajarita - Arte y diseño en origami. Una galería minimalista dedicada al arte del papel.">
+    <title>La Pajarita | Arte en Papel</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <h1 class="logo">La Pajarita</h1>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#historia">Historia</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="container hero-content">
+                <p class="hero-subtitle">El arte de la simplicidad</p>
+                <h2 class="hero-title">Transformando papel en <br><span>emociones</span></h2>
+                <a href="#galeria" class="btn btn-primary">Ver Colección</a>
+            </div>
+            <div class="hero-background-element"></div>
+        </section>
+
+        <section id="galeria" class="gallery-section">
+            <div class="container">
+                <header class="section-header">
+                    <h3>Nuestra Colección</h3>
+                    <div class="divider"></div>
+                </header>
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Gallery items will be injected by JS or hardcoded later -->
+                    <div class="gallery-item placeholder">
+                        <div class="placeholder-icon"></div>
+                    </div>
+                    <div class="gallery-item placeholder">
+                        <div class="placeholder-icon"></div>
+                    </div>
+                    <div class="gallery-item placeholder">
+                        <div class="placeholder-icon"></div>
+                    </div>
+                    <!-- Added more items for grid visualization -->
+                    <div class="gallery-item placeholder">
+                        <div class="placeholder-icon"></div>
+                    </div>
+                    <div class="gallery-item placeholder">
+                        <div class="placeholder-icon"></div>
+                    </div>
+                    <div class="gallery-item placeholder">
+                        <div class="placeholder-icon"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="historia" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <h3>La Esencia de La Pajarita</h3>
+                    <p>En un mundo digital, volvemos a lo tangible. Cada pliegue cuenta una historia, cada figura
+                        captura un momento de paciencia y precisión.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2024 La Pajarita. Hecho con paciencia.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
