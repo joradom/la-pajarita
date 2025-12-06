@@ -245,13 +245,53 @@ img {
 
 .gallery-item {
     background-color: var(--color-surface);
-    aspect-ratio: 1;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-soft);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: auto;
+    /* Changed for images */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .item-overlay {
+    transform: translateY(0);
+}
+
+.item-overlay h4 {
+    font-size: 1.2rem;
+    color: var(--color-text-main);
+    margin-bottom: 0.3rem;
+}
+
+.item-overlay p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
 }
 
 .gallery-item:hover {
