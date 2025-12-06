@@ -247,20 +247,20 @@ img {
     background-color: var(--color-surface);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-soft);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease;
-    overflow: hidden;
+    /* Removed display: flex to avoid layout issues with absolute children */
+    display: block;
     position: relative;
-    aspect-ratio: auto;
-    /* Changed for images */
+    overflow: hidden;
+    /* Ensures overlay is clipped when out of view */
+    aspect-ratio: 1;
+    /* Restore square shape for consistent grid */
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
     transition: transform 0.5s ease;
 }
 
@@ -273,14 +273,20 @@ img {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     padding: 1.5rem;
     transform: translateY(100%);
-    transition: transform 0.3s ease;
+    /* Start hidden below the card */
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .gallery-item:hover .item-overlay {
     transform: translateY(0);
+    /* Slide up on hover */
 }
 
 .item-overlay h4 {
